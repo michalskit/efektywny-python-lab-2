@@ -1,7 +1,7 @@
 def powerset(x):
     '''
     Funkcja zwraca zbior potęgowy.
-    wejście: Listę (która może zawierać liczby, litery lub inne obiekty)
+    wejście: Lista (która może zawierać liczby, litery lub inne obiekty)
     wyjście: Lista wszystkich jej podzbiorów. Każdy podzbiór powinien być przedstawiony w postaci listy.
 
     Przykłady:

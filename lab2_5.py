@@ -1,6 +1,6 @@
 # Zapisz poniższą funkcję w postaci list/dict/set 
 # comprehension. Nie należy używać żadnych zmiennych tymczasowych
-# ani dodatkowych linii, każda funkcja ma zostać wyrażona
+# ani dodatkowych linii, funkcja ma zostać wyrażona
 # w postaci:
 
 # def FUNKCJA(ARGUMENTY):
