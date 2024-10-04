@@ -2,82 +2,42 @@
   "tests": [
     {
       "name": "Exercise 1",
-      "setup": "",
       "run": "pytest test_lab2_1.py",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
       "points": 1
     },
     {
       "name": "Exercise 2",
-      "setup": "",
       "run": "pytest test_lab2_2.py",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
       "points": 1
     },
     {
       "name": "Exercise 3",
-      "setup": "",
       "run": "pytest test_lab2_3.py",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
       "points": 1
     },
     {
       "name": "Exercise 4",
-      "setup": "",
       "run": "pytest test_lab2_4.py",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
       "points": 1
     },
     {
       "name": "Exercise 5",
-      "setup": "",
       "run": "pytest test_lab2_5.py",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
       "points": 1
     },
     {
       "name": "Exercise 6",
-      "setup": "",
       "run": "pytest test_lab2_6.py",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
       "points": 1
     },
     {
       "name": "Exercise 7",
-      "setup": "",
       "run": "pytest test_lab2_7.py",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
       "points": 1
     },
     {
       "name": "Exercise 8",
-      "setup": "",
       "run": "pytest test_lab2_8.py",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
       "points": 1
     }
   ]

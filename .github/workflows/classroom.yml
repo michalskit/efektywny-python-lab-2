@@ -1,57 +1,33 @@
 name: Autograding Tests
 
 on:
-  - push
-  - workflow_dispatch
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
 permissions:
+  contents: read
   checks: write
   actions: read
-  contents: read
 
 jobs:
-  run-autograding-tests:
+  autograding:
     runs-on: ubuntu-latest
     if: github.actor != 'github-classroom[bot]'
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.10'
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install pytest
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest
 
-    - name: Run tests and collect points
-      id: run-tests
-      run: |
-        points=0
-        for i in {1..8}
-        do
-          if pytest test_lab2_$i.py; then
-            echo "exercise_${i}=pass" >> $GITHUB_OUTPUT
-            ((points++))
-          else
-            echo "exercise_${i}=fail" >> $GITHUB_OUTPUT
-          fi
-        done
-        echo "points=$points" >> $GITHUB_OUTPUT
-        echo "POINTS=$points" >> $GITHUB_ENV
-      continue-on-error: true
-
-    - name: Autograding Reporter
-      uses: classroom-resources/autograding-grading-reporter@v1
-      if: always()
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        TEST_RESULTS: ${{ steps.run-tests.outputs.points }}
-      with:
-        runners: run-autograding-tests
-
-    - uses: education/autograding@v1
-      if: always()
+      - uses: education/autograding@v1
+        if: always()
